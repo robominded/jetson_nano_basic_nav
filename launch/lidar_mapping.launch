@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<launch>
+
+    <remap from="scanmatch_odom" to="odom" />
+    <node pkg="jetbot_hw" name="jetbot_motor" type="jetbot_motor.py"></node>
+    <include file="$(find teleop_twist_keyboard)/launch/teleop_twist_keyboard.launch" />
+    <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+    <include file="$(find hector_slam_launch)/launch/tutorial.launch" />
+
+</launch>
